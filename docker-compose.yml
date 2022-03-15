@@ -1,0 +1,11 @@
+version: "3"
+services:
+  vim-builder:
+    image: egdoc/vim-builder
+    container_name: vim-builder-container
+    build:
+      context: .
+    environment:
+      PREFIX: /usr/local
+    volumes:
+      - ./src:/home/compiler:Z
